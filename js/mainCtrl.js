@@ -7,8 +7,8 @@ app.controller('mainCtrl', function($scope, parseService){
   //your controllers $scope as messages ($scope.messages)
     $scope.getParseData = function(){
       parseService.getData().then(function(response){
-        //console.log(response)
-        $scope.messages = response.data
+        console.log(response)
+        $scope.messages = response.data.results
       })
     }
 
